@@ -1,0 +1,40 @@
+﻿{
+  "title": "HttpProblem.Nancy",
+  "version": "0.0.1-alpha",
+  "authors": [ "Luk Vermeulen" ],
+  "copyright": "Copyright 2016",
+  "description": "A library to turn exceptions into REST responses, following the specification at http://tools.ietf.org/html/draft-nottingham-http-problem-04",
+
+  "buildOptions": {
+    "optimize": true,
+    "outputName": "HttpProblem.Nancy",
+    "xmlDoc": false
+  },
+
+  "packOptions": {
+    "owners": [ "Luk Vermeulen" ],
+    "requireLicenseAcceptance": true,
+    "summary": "A library to turn exceptions into REST responses, following the specification at http://tools.ietf.org/html/draft-nottingham-http-problem-04",
+    "tags": [ "Nancy", "Exception", "Pipeline", "http", "problem", "ietf", "draft-nottingham-http-problem-04" ],
+    "projectUrl": "https://github.com/lvermeulen/HttpProblem",
+    "licenseUrl": "https://github.com/lvermeulen/HttpProblem/blob/master/LICENSE",
+    "iconUrl": "http://i.imgur.com/WnKfKOC.png?1",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/lvermeulen/HttpProblem"
+    }
+  },
+
+  "dependencies": {
+    "Nancy": "2.0.0-barneyrubble"
+  },
+
+  "frameworks": {
+    "net452": {},
+    "netstandard1.6": {
+      "dependencies": {
+        "NETStandard.Library": "1.6.0"
+      }
+    }
+  }
+}
