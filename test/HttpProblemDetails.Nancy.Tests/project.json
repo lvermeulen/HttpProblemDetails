@@ -5,7 +5,8 @@
   "dependencies": {
     "coveralls.io": "1.3.4",
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
-    "HttpProblem.Nancy": { "target": "project" },
+    "HttpProblemDetails.Nancy": { "target": "project" },
+    "Nancy.Testing": "2.0.0-barneyrubble",
     "OpenCover": "4.6.519",
     "xunit": "2.2.0-beta2-build3300"
   },

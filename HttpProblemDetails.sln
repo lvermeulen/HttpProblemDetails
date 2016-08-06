@@ -8,13 +8,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HttpProblem.Nancy", "src\HttpProblem.Nancy\HttpProblem.Nancy.xproj", "{51F959BC-D014-4BDE-AC9C-911B1AC2549C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{7D6A6786-F68D-4F47-A765-22A6ABBD7B83}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{9D2BE561-6402-4864-8677-E95A0A5BBAFD}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HttpProblem.Nancy.Tests", "test\HttpProblem.Nancy.Tests\HttpProblem.Nancy.Tests.xproj", "{8BE14104-2C58-47B8-962E-6997D9D1231C}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HttpProblemDetails.Nancy", "src\HttpProblemDetails.Nancy\HttpProblemDetails.Nancy.xproj", "{51F959BC-D014-4BDE-AC9C-911B1AC2549C}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HttpProblemDetails.Nancy.Tests", "test\HttpProblemDetails.Nancy.Tests\HttpProblemDetails.Nancy.Tests.xproj", "{8BE14104-2C58-47B8-962E-6997D9D1231C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
