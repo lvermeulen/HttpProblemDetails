@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HttpProblemDetails.Nancy
+namespace HttpProblemDetails
 {
     public interface IHttpProblemDetail
     {

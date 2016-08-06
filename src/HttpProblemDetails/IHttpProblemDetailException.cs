@@ -1,10 +1,8 @@
-﻿using Nancy;
-
-namespace HttpProblemDetails.Nancy
+﻿namespace HttpProblemDetails
 {
     public interface IHttpProblemDetailException
     {
-        HttpStatusCode StatusCode { get; }
+        int StatusCode { get; }
 
         IHttpProblemDetail ProblemDetail { get; }
     }

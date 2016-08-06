@@ -6,6 +6,9 @@
   "description": "A library to render problem details as specified by RFC 7808 at https://tools.ietf.org/rfc/rfc7807.txt",
 
   "buildOptions": {
+    "compile": {
+      "include": "../HttpProblemDetails/*.cs"
+    },
     "optimize": true,
     "outputName": "HttpProblemDetails.Nancy",
     "xmlDoc": false
@@ -16,12 +19,12 @@
     "requireLicenseAcceptance": true,
     "summary": "A library to render problem details as specified by RFC 7808 at https://tools.ietf.org/rfc/rfc7807.txt",
     "tags": [ "Nancy", "Exception", "Pipeline", "http", "problem details", "ietf", "rfc", "7807", "draft-nottingham-http-problem" ],
-    "projectUrl": "https://github.com/lvermeulen/HttpProblem",
-    "licenseUrl": "https://github.com/lvermeulen/HttpProblem/blob/master/LICENSE",
+    "projectUrl": "https://github.com/lvermeulen/HttpProblemDetails",
+    "licenseUrl": "https://github.com/lvermeulen/HttpProblemDetails/blob/master/LICENSE",
     "iconUrl": "http://i.imgur.com/WnKfKOC.png?1",
     "repository": {
       "type": "git",
-      "url": "https://github.com/lvermeulen/HttpProblem"
+      "url": "https://github.com/lvermeulen/HttpProblemDetails"
     }
   },
 

@@ -8,19 +8,6 @@ namespace HttpProblemDetails.Nancy
 {
     public static class HttpProblemDetails
     {
-        private static IHttpProblemDetailException GetHttpProblemDetailException(Exception ex)
-        {
-            var exception = ex as IHttpProblemDetailException;
-            if (exception != null)
-            {
-                return exception;
-            }
-
-            return ex.InnerException != null
-                ? GetHttpProblemDetailException(ex.InnerException)
-                : null;
-        }
-
         private static string GetContentTypeForContext(NancyContext context)
         {
             var mediaRanges = context.Request.Headers.Accept
@@ -53,7 +40,7 @@ namespace HttpProblemDetails.Nancy
             {
                 pipelines.OnError.AddItemToEndOfPipeline((context, exception) =>
                 {
-                    var ex = GetHttpProblemDetailException(exception);
+                    var ex = HttpProblemDetailException.FromException(exception);
                     if (ex == null)
                     {
                         return context.Response;
