@@ -25,7 +25,6 @@ namespace HttpProblemDetails.AspNetCore
             return accept.FirstOrDefault() ?? "application/problem+json";
         }
 
-
         public static void HandleProblemDetailsException(this HttpContext context, Exception exception)
         {
             var ex = HttpProblemDetailException.FromException(exception);
