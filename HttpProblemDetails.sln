@@ -5,10 +5,22 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F8A1D5FE-2355-4FB7-B1B2-F4070A14F5DA}"
 	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		appveyor.yml = appveyor.yml
 		global.json = global.json
+		LICENSE = LICENSE
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{7D6A6786-F68D-4F47-A765-22A6ABBD7B83}"
+	ProjectSection(SolutionItems) = preProject
+		build\build.ps1 = build\build.ps1
+		build\cover.ps1 = build\cover.ps1
+		build\install.ps1 = build\install.ps1
+		build\installDotnet.ps1 = build\installDotnet.ps1
+		build\test.ps1 = build\test.ps1
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{9D2BE561-6402-4864-8677-E95A0A5BBAFD}"
 EndProject
@@ -16,7 +28,19 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HttpProblemDetails.Nancy", 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HttpProblemDetails.Nancy.Tests", "test\HttpProblemDetails.Nancy.Tests\HttpProblemDetails.Nancy.Tests.xproj", "{8BE14104-2C58-47B8-962E-6997D9D1231C}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HttpProblemDetails.AspNetCore", "src\HttpProblemDetails.AspNetCore\HttpProblemDetails.AspNetCore.xproj", "{2BFC04B3-E398-4D62-83C8-B8C2B6B31F68}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HttpProblemDetails", "src\HttpProblemDetails\HttpProblemDetails.shproj", "{AC2D1E6C-07BD-436F-9196-81A13590AAB4}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HttpProblemDetails.AspNetCore.Tests", "test\HttpProblemDetails.AspNetCore.Tests\HttpProblemDetails.AspNetCore.Tests.xproj", "{179E2F47-F858-4917-BE3E-0A2FB685C0DD}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HttpProblemDetails.Tests", "test\HttpProblemDetails.Tests\HttpProblemDetails.Tests.shproj", "{33843677-EF51-49B4-BB1B-AA9AF36E7AC8}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		test\HttpProblemDetails.Tests\HttpProblemDetails.Tests.projitems*{33843677-ef51-49b4-bb1b-aa9af36e7ac8}*SharedItemsImports = 13
+		src\HttpProblemDetails\HttpProblemDetails.projitems*{ac2d1e6c-07bd-436f-9196-81a13590aab4}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -30,11 +54,21 @@ Global
 		{8BE14104-2C58-47B8-962E-6997D9D1231C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BE14104-2C58-47B8-962E-6997D9D1231C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BE14104-2C58-47B8-962E-6997D9D1231C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BFC04B3-E398-4D62-83C8-B8C2B6B31F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BFC04B3-E398-4D62-83C8-B8C2B6B31F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BFC04B3-E398-4D62-83C8-B8C2B6B31F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BFC04B3-E398-4D62-83C8-B8C2B6B31F68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{179E2F47-F858-4917-BE3E-0A2FB685C0DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{179E2F47-F858-4917-BE3E-0A2FB685C0DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{179E2F47-F858-4917-BE3E-0A2FB685C0DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{179E2F47-F858-4917-BE3E-0A2FB685C0DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8BE14104-2C58-47B8-962E-6997D9D1231C} = {9D2BE561-6402-4864-8677-E95A0A5BBAFD}
+		{179E2F47-F858-4917-BE3E-0A2FB685C0DD} = {9D2BE561-6402-4864-8677-E95A0A5BBAFD}
+		{33843677-EF51-49B4-BB1B-AA9AF36E7AC8} = {9D2BE561-6402-4864-8677-E95A0A5BBAFD}
 	EndGlobalSection
 EndGlobal

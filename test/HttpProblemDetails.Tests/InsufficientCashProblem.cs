@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HttpProblemDetails.Nancy.Tests
+namespace HttpProblemDetails.Tests
 {
     public class InsufficientCashProblem : IHttpProblemDetail
     {

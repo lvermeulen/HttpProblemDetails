@@ -1,4 +1,4 @@
-﻿{
+{
   "version": "1.0.0",
   "testRunner": "xunit",
 
@@ -11,8 +11,11 @@
   "dependencies": {
     "coveralls.io": "1.3.4",
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
-    "HttpProblemDetails.Nancy": { "target": "project" },
-    "Nancy.Testing": "2.0.0-barneyrubble",
+    "HttpProblemDetails.AspNetCore": { "target": "project" },
+    "Microsoft.AspNetCore.Hosting": "1.0.0",
+    "Microsoft.AspNetCore.Mvc": "1.0.0",
+    "Microsoft.AspNetCore.Mvc.Core": "1.0.0",
+    "Microsoft.AspNetCore.TestHost": "1.0.0",
     "OpenCover": "4.6.519",
     "xunit": "2.2.0-beta2-build3300"
   },

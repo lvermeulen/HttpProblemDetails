@@ -1,5 +1,6 @@
 ﻿using System;
 using Nancy;
+using HttpProblemDetails.Tests;
 
 namespace HttpProblemDetails.Nancy.Tests
 {
@@ -19,7 +20,7 @@ namespace HttpProblemDetails.Nancy.Tests
                         Detail = "Your current balance is 30, but that costs 50.",
                         Instance = new Uri("/account/12345/msgs/abc", UriKind.Relative)
                     };
-                    throw new InsufficientCashException((HttpStatusCode)problemDetail.Status, problemDetail);
+                    throw new InsufficientCashException(problemDetail.Status, problemDetail);
                 }
 
                 return await Response
