@@ -31,11 +31,6 @@ namespace HttpProblemDetails.AspNetCore
                 }
 
                 context.HandleProblemDetailsException(ex);
-                //await _oex.ExecuteAsync(new ActionContext() {HttpContext = context}, new ObjectResult(new
-                //{
-                //    Error = "Exception",
-                //    Exception = e
-                //}));
             }
         }
     }
