@@ -6,7 +6,7 @@ pull_requests:
   do_not_increment_build_number: true
 environment:
   COVERALLS_REPO_TOKEN:
-    secure: kDcf0mhCCCONpQVpeaA6M5qIuuLggG7lfv1tCMiZCzUmdjtmoIcwFaRQRf00bIdn
+    secure: BBHyebw3hQu3zJ9/zrOhVACKqz7FKs0hHz+RDD9fFUCsnJ1ACuGWTBL5PTxyWxd2
   COVER_FILTER: '+[HttpProblemDetails*]* -[*]*.Logging.* -[*Tests]* -[AngleSharp]*'
 install:
   - ps: .\build\install.ps1
