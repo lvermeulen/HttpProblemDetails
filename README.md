@@ -9,7 +9,7 @@ A library to render problem details as specified by RFC 7808 at [https://tools.i
 
 ##Usage:
 
-Implement interface IHttpProblemDetailException in your exceptions. This requires implementing interface IHttpProblemDetail which carries the fields required by the RFC.
+Implement interface IHttpProblemDetailException in your exceptions, which is an exception with an IHttpProblemDetail. The IHttpProblemDetail carries the fields required by the RFC and will be rendered in your HTTP response.
 
 The tests use exception InsufficientCashException with problem detail InsufficientCashProblem following the example in the RFC.
 
@@ -37,7 +37,7 @@ Step 1: Register the exception filter in your Startup class
         {
             services.AddMvc(options =>
             {
-                **options.Filters.Add(new HttpProblemDetailsExceptionFilter(_loggerFactory));**
+                options.Filters.Add(new HttpProblemDetailsExceptionFilter(_loggerFactory));
             });
         }
     }
@@ -60,7 +60,7 @@ Step 2: Throw an exception with a problem detail in your controller
                     Detail = "Your current balance is 30, but that costs 50.",
                     Instance = new Uri("/account/12345/msgs/abc", UriKind.Relative)
                 };
-                **throw new InsufficientCashException(problemDetail.Status, problemDetail);**
+                throw new InsufficientCashException(problemDetail.Status, problemDetail);
             }
 
             return "OK";
@@ -83,7 +83,7 @@ Step 1: Use the middleware in your Startup class
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            **app.UseHttpProblemDetails();**
+            app.UseHttpProblemDetails();
         }
 
         public void ConfigureServices(IServiceCollection services)
@@ -110,7 +110,7 @@ Step 2: Throw an exception with a problem detail in your controller
                     Detail = "Your current balance is 30, but that costs 50.",
                     Instance = new Uri("/account/12345/msgs/abc", UriKind.Relative)
                 };
-                **throw new InsufficientCashException(problemDetail.Status, problemDetail);**
+                throw new InsufficientCashException(problemDetail.Status, problemDetail);
             }
 
             return "OK";
@@ -126,7 +126,7 @@ Step 1: Enable the extension
     {
         protected override void RequestStartup(TinyIoCContainer container, IPipelines pipelines, NancyContext context)
         {
-            **HttpProblemDetails.Enable(pipelines, container.Resolve<IResponseNegotiator>());**
+            HttpProblemDetails.Enable(pipelines, container.Resolve<IResponseNegotiator>());
         }
     }
 ~~~~
@@ -149,7 +149,7 @@ Step 2: Throw an exception with a problem detail in your module
                         Detail = "Your current balance is 30, but that costs 50.",
                         Instance = new Uri("/account/12345/msgs/abc", UriKind.Relative)
                     };
-                    **throw new InsufficientCashException(problemDetail.Status, problemDetail);**
+                    throw new InsufficientCashException(problemDetail.Status, problemDetail);
                 }
 
                 return await Response
