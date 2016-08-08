@@ -6,6 +6,7 @@ A library to render problem details as specified by RFC 7808 at [https://tools.i
 * AspNetCore ExceptionFilter
 * AspNetCore Middleware
 * Nancy pipelines extension
+* Web Api ExceptionFilterAttribute
 
 ##Usage:
 
@@ -156,6 +157,55 @@ Step 2: Throw an exception with a problem detail in your module
                     .AsText("OK")
                     .WithStatusCode(HttpStatusCode.OK);
             });
+        }
+    }
+~~~~
+
+* Web Api ExceptionFilterAttribute
+
+Step 1: Add the exception filter to your configuration, or apply the attribute to a controller or method
+
+Configuration:
+~~~~
+	GlobalConfiguration.Configuration.Filters.Add(
+	    new HttpProblemDetailsExceptionFilterAttribute());
+~~~~
+
+Controller or method:
+~~~~
+	[HttpProblemDetailsExceptionFilter]
+    public class PaymentController : ApiController
+    {
+        [Route("/payment/{account}")]
+		[HttpProblemDetailsExceptionFilter]
+        public string GetPayment(string account)
+        {
+			...
+		}
+	}
+~~~~
+
+Step 2: Throw an exception with a problem detail in your controller
+~~~~
+    public class PaymentController : ApiController
+    {
+        [Route("/payment/{account}")]
+        public string GetPayment(string account)
+        {
+            if (account == "12345")
+            {
+                var problemDetail = new InsufficientCashProblem
+                {
+                    Type = new Uri("https://example.com/probs/out-of-credit"),
+                    Title = "You do not have enough credit.",
+                    Status = 403,
+                    Detail = "Your current balance is 30, but that costs 50.",
+                    Instance = new Uri("/account/12345/msgs/abc", UriKind.Relative)
+                };
+                throw new InsufficientCashException(problemDetail.Status, problemDetail);
+            }
+
+            return "OK";
         }
     }
 ~~~~
