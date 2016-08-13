@@ -3,7 +3,7 @@
   "version": "0.0.1-alpha",
   "authors": [ "Luk Vermeulen" ],
   "copyright": "Copyright 2016",
-  "description": "A library to render problem details as specified by RFC 7808 at https://tools.ietf.org/rfc/rfc7807.txt",
+  "description": "A library to render problem details as specified by RFC 7807 at https://tools.ietf.org/rfc/rfc7807.txt",
 
   "buildOptions": {
     "compile": {
@@ -17,7 +17,7 @@
   "packOptions": {
     "owners": [ "Luk Vermeulen" ],
     "requireLicenseAcceptance": true,
-    "summary": "A library to render problem details as specified by RFC 7808 at https://tools.ietf.org/rfc/rfc7807.txt",
+    "summary": "A library to render problem details as specified by RFC 7807 at https://tools.ietf.org/rfc/rfc7807.txt",
     "tags": [ "Nancy", "Exception", "Pipeline", "http", "problem details", "ietf", "rfc", "7807", "draft-nottingham-http-problem" ],
     "projectUrl": "https://github.com/lvermeulen/HttpProblemDetails",
     "licenseUrl": "https://github.com/lvermeulen/HttpProblemDetails/blob/master/LICENSE",

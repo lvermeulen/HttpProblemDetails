@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("HttpProblemDetails.WebApi")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A library to render problem details as specified by RFC 7807 at https://tools.ietf.org/rfc/rfc7807.txt")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("HttpProblemDetails.WebApi")]
