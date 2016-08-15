@@ -2,8 +2,8 @@
 {
     public class InsufficientCashException : HttpProblemDetailException<InsufficientCashProblem>
     {
-        public InsufficientCashException(int statusCode, IHttpProblemDetail problemDetail) 
-            : base(statusCode, problemDetail)
+        public InsufficientCashException(IHttpProblemDetail problemDetail) 
+            : base(problemDetail)
         { }
     }
 }

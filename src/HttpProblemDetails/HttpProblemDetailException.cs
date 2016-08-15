@@ -6,6 +6,11 @@ namespace HttpProblemDetails
     {
         public static IHttpProblemDetailException FromException(Exception ex)
         {
+            if (ex == null)
+            {
+                return null;
+            }
+
             var exception = ex as IHttpProblemDetailException;
             if (exception != null)
             {
@@ -21,13 +26,11 @@ namespace HttpProblemDetails
     public abstract class HttpProblemDetailException<T> : Exception, IHttpProblemDetailException 
         where T : IHttpProblemDetail
     {
-        public int StatusCode { get; }
         public IHttpProblemDetail ProblemDetail { get; }
         public override string Message => ProblemDetail.Detail;
 
-        protected HttpProblemDetailException(int statusCode, IHttpProblemDetail problemDetail)
+        protected HttpProblemDetailException(IHttpProblemDetail problemDetail)
         {
-            StatusCode = statusCode;
             ProblemDetail = problemDetail;
         }
     }
