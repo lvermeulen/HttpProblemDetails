@@ -47,7 +47,7 @@ namespace HttpProblemDetails.Nancy
 
                     var negotiator = new Negotiator(context)
                         .WithContentType(GetContentTypeForContext(context))
-                        .WithStatusCode(ex.StatusCode)
+                        .WithStatusCode(ex?.ProblemDetail?.Status ?? 0)
                         .WithModel(ex.ProblemDetail);
 
                     return responseNegotiator.NegotiateResponse(negotiator, context);

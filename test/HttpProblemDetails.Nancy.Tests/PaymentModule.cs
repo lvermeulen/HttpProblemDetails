@@ -16,11 +16,11 @@ namespace HttpProblemDetails.Nancy.Tests
                     {
                         Type = new Uri("https://example.com/probs/out-of-credit"),
                         Title = "You do not have enough credit.",
-                        Status = 403,
+                        Status = (int)HttpStatusCode.Forbidden,
                         Detail = "Your current balance is 30, but that costs 50.",
                         Instance = new Uri("/account/12345/msgs/abc", UriKind.Relative)
                     };
-                    throw new InsufficientCashException(problemDetail.Status, problemDetail);
+                    throw new InsufficientCashException(problemDetail);
                 }
 
                 return await Response
