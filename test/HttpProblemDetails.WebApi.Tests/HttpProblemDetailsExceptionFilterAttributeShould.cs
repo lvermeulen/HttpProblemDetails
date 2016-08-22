@@ -65,11 +65,11 @@ namespace HttpProblemDetails.WebApi.Tests
         {
             var exception = new InsufficientCashException(new InsufficientCashProblem
             {
-                Type = new Uri("https://example.com/probs/out-of-credit"),
+                Type = new Uri("https://example.com/probs/out-of-credit").ToString(),
                 Title = "You do not have enough credit.",
                 Status = (int)HttpStatusCode.Forbidden,
                 Detail = "Your current balance is 30, but that costs 50.",
-                Instance = new Uri("/account/12345/msgs/abc", UriKind.Relative)
+                Instance = new Uri("/account/12345/msgs/abc", UriKind.Relative).ToString()
             });
             var filter = new HttpProblemDetailsExceptionFilterAttribute();
             var actionExecutedContext = CreateActionExecutedContext("http://host:1234/payment/12345", exception,

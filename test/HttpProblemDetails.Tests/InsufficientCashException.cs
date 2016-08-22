@@ -5,5 +5,9 @@
         public InsufficientCashException(IHttpProblemDetail problemDetail) 
             : base(problemDetail)
         { }
+
+        public InsufficientCashException()
+            : base(new InsufficientCashProblem())
+        { }
     }
 }

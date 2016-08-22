@@ -11,5 +11,6 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)InsufficientCashException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)InsufficientCashProblem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DeserializationHelper.cs" />
   </ItemGroup>
 </Project>

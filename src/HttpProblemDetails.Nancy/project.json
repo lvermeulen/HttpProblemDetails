@@ -29,7 +29,7 @@
   },
 
   "dependencies": {
-    "Nancy": "2.0.0-barneyrubble"
+    "Nancy": "2.0.0-Pre1769"
   },
 
   "frameworks": {

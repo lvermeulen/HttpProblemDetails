@@ -14,11 +14,11 @@ namespace HttpProblemDetails.WebApi.Tests
             {
                 var problemDetail = new InsufficientCashProblem
                 {
-                    Type = new Uri("https://example.com/probs/out-of-credit"),
+                    Type = new Uri("https://example.com/probs/out-of-credit").ToString(),
                     Title = "You do not have enough credit.",
                     Status = (int)HttpStatusCode.Forbidden,
                     Detail = "Your current balance is 30, but that costs 50.",
-                    Instance = new Uri("/account/12345/msgs/abc", UriKind.Relative)
+                    Instance = new Uri("/account/12345/msgs/abc", UriKind.Relative).ToString()
                 };
                 throw new InsufficientCashException(problemDetail);
             }

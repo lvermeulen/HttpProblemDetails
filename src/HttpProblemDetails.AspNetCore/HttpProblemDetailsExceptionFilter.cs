@@ -20,7 +20,8 @@ namespace HttpProblemDetails.AspNetCore
 
         public void OnException(ExceptionContext context)
         {
-            context.HttpContext.HandleProblemDetailsException(context.Exception);
+            //context.HttpContext.HandleProblemDetailsException(context.Exception);
+            context.HandleProblemDetailsException(context.Exception);
             context.Exception = null;
 
             _logger.LogError(nameof(HttpProblemDetailsExceptionFilter), context.Exception);
