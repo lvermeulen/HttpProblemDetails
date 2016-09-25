@@ -30,7 +30,7 @@
 
   "dependencies": {
     "Microsoft.AspNetCore.Http.Abstractions": "1.0.0",
-    "Microsoft.AspNetCore.Mvc.Core": "1.0.0",
+    "Microsoft.AspNetCore.Mvc.Core": "1.0.1",
     "System.Net.Http": "4.1.0"
   },
 
