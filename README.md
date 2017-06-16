@@ -2,13 +2,13 @@
 # HttpProblemDetails [![Build status](https://ci.appveyor.com/api/projects/status/63u4fo3onib9xlng?svg=true)](https://ci.appveyor.com/project/lvermeulen/httpproblemdetails) [![license](https://img.shields.io/badge/license-MIT-blue.svg?maxAge=2592000)](https://github.com/lvermeulen/httpproblemdetails/blob/master/LICENSE) [![NuGet](https://img.shields.io/nuget/vpre/httpproblemdetails.aspnetcore.svg?maxAge=2592000)](https://www.nuget.org/packages/httpproblemdetails.aspnetcore/) [![Coverage Status](https://coveralls.io/repos/github/lvermeulen/HttpProblemDetails/badge.svg?branch=master)](https://coveralls.io/github/lvermeulen/HttpProblemDetails?branch=master) [![Dependency Status](https://dependencyci.com/github/lvermeulen/HttpProblemDetails/badge)](https://dependencyci.com/github/lvermeulen/HttpProblemDetails) [![Join the chat at https://gitter.im/lvermeulen/Equalizer](https://badges.gitter.im/lvermeulen/httpproblemdetails.svg)](https://gitter.im/lvermeulen/httpproblemdetails?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) ![](https://img.shields.io/badge/.net-4.5.2-yellowgreen.svg) ![](https://img.shields.io/badge/netstandard-1.6-yellowgreen.svg)
 A library to render problem details as specified by RFC 7807 at [https://tools.ietf.org/rfc/rfc7807.txt](https://tools.ietf.org/rfc/rfc7807.txt), with implementations for WebApi, AspNetCore and Nancy.
 
-##Features:
+## Features:
 * Web Api ExceptionFilterAttribute
 * AspNetCore ExceptionFilter
 * AspNetCore Middleware
 * Nancy pipelines extension
 
-##Usage:
+## Usage:
 
 Implement interface IHttpProblemDetailException in your exceptions, which is an exception with an IHttpProblemDetail. The IHttpProblemDetail carries the fields required by the RFC and will be rendered in your HTTP response.
 
@@ -210,5 +210,5 @@ Step 2: Throw an exception with a problem detail in your controller
     }
 ~~~~
 
-##Thanks
+## Thanks
 * [Laptop Alert](https://thenounproject.com/term/laptop-alert/560850/) icon by [arejoenah](https://thenounproject.com/arejoenah/) from [The Noun Project](https://thenounproject.com)

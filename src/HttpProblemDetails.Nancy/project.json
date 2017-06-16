@@ -21,7 +21,7 @@
     "tags": [ "Nancy", "Exception", "Pipeline", "http", "problem details", "ietf", "rfc", "7807", "draft-nottingham-http-problem" ],
     "projectUrl": "https://github.com/lvermeulen/HttpProblemDetails",
     "licenseUrl": "https://github.com/lvermeulen/HttpProblemDetails/blob/master/LICENSE",
-    "iconUrl": "http://i.imgur.com/WnKfKOC.png?1",
+    "iconUrl": "http://i.imgur.com/uz0knGJ.png?1",
     "repository": {
       "type": "git",
       "url": "https://github.com/lvermeulen/HttpProblemDetails"
@@ -29,7 +29,7 @@
   },
 
   "dependencies": {
-    "Nancy": "2.0.0-Pre1769"
+    "Nancy": "2.0.0-clinteastwood"
   },
 
   "frameworks": {
