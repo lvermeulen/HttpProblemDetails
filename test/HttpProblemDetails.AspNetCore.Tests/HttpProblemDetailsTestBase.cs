@@ -64,7 +64,7 @@ namespace HttpProblemDetails.AspNetCore.Tests
                 Assert.Equal("Your current balance is 30, but that costs 50.", problemDetail.detail.ToString());
                 Assert.Equal("/account/12345/msgs/abc", problemDetail.instance.ToString());
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 
             }

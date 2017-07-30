@@ -24,7 +24,7 @@ namespace HttpProblemDetails.Nancy.Tests
         }
 
         [Fact]
-        public async Task ReturnSuccess()
+        public async Task ReturnSuccessAsync()
         {
             var result = await _browser.Get("/payment/67890", with => 
             {
@@ -39,7 +39,7 @@ namespace HttpProblemDetails.Nancy.Tests
         [Theory]
         [InlineData("application/json", "application/problem+json")]
         [InlineData("application/xml", "application/problem+xml")]
-        public async Task ReturnInsufficientCash(string accept, string expectedContentType)
+        public async Task ReturnInsufficientCashAsync(string accept, string expectedContentType)
         {
             var assertByAccept = new Dictionary<string, Action<string>>
             {
