@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>A library to render problem details as specified by RFC 7807 at https://tools.ietf.org/rfc/rfc7807.txt</Description>
+    <Copyright>Copyright 2016</Copyright>
+    <AssemblyTitle>HttpProblemDetails.AspNetCore</AssemblyTitle>
+    <VersionPrefix>0.0.1-alpha</VersionPrefix>
+    <Authors>Luk Vermeulen</Authors>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <AssemblyName>HttpProblemDetails.AspNetCore</AssemblyName>
+    <PackageId>HttpProblemDetails.AspNetCore</PackageId>
+    <PackageTags>Nancy;Exception;Pipeline;http;problem details;ietf;rfc;7807;draft-nottingham-http-problem</PackageTags>
+    <PackageIconUrl>http://i.imgur.com/uz0knGJ.png?1</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/lvermeulen/HttpProblemDetails</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/lvermeulen/HttpProblemDetails/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/lvermeulen/HttpProblemDetails</RepositoryUrl>
+    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\HttpProblemDetails\*.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="1.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="1.0.3" />
+    <PackageReference Include="System.Net.Http" Version="4.1.1" />
+  </ItemGroup>
+
+</Project>

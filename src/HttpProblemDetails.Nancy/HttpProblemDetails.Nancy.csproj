@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>A library to render problem details as specified by RFC 7807 at https://tools.ietf.org/rfc/rfc7807.txt</Description>
+    <Copyright>Copyright 2016</Copyright>
+    <AssemblyTitle>HttpProblemDetails.Nancy</AssemblyTitle>
+    <VersionPrefix>0.0.1-alpha</VersionPrefix>
+    <Authors>Luk Vermeulen</Authors>
+    <TargetFrameworks>net452;netstandard1.6</TargetFrameworks>
+    <AssemblyName>HttpProblemDetails.Nancy</AssemblyName>
+    <PackageId>HttpProblemDetails.Nancy</PackageId>
+    <PackageTags>Nancy;Exception;Pipeline;http;problem details;ietf;rfc;7807;draft-nottingham-http-problem</PackageTags>
+    <PackageIconUrl>http://i.imgur.com/uz0knGJ.png?1</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/lvermeulen/HttpProblemDetails</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/lvermeulen/HttpProblemDetails/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/lvermeulen/HttpProblemDetails</RepositoryUrl>
+    <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard1.6' ">1.6.0</NetStandardImplicitPackageVersion>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\HttpProblemDetails\*.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Nancy" Version="2.0.0-clinteastwood" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+</Project>
