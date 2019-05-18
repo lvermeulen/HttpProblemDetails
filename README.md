@@ -17,7 +17,7 @@ The tests use exception InsufficientCashException with problem detail Insufficie
 * AspNetCore ExceptionFilter:
 
 Step 1: Register the exception filter in your Startup class
-~~~~
+~~~~cs
     public class ExceptionFilterStartup
     {
         private ILoggerFactory _loggerFactory;
@@ -45,7 +45,7 @@ Step 1: Register the exception filter in your Startup class
 ~~~~
 
 Step 2: Throw an exception with a problem detail in your controller
-~~~~
+~~~~cs
     public class PaymentController : Controller
     {
         [Route("/payment/{account}")]
@@ -72,7 +72,7 @@ Step 2: Throw an exception with a problem detail in your controller
 * AspNetCore Middleware:
 
 Step 1: Use the middleware in your Startup class
-~~~~
+~~~~cs
     public class MiddlewareStartup
     {
         public void Configure(IApplicationBuilder app)
@@ -95,7 +95,7 @@ Step 1: Use the middleware in your Startup class
 ~~~~
 
 Step 2: Throw an exception with a problem detail in your controller
-~~~~
+~~~~cs
     public class PaymentController : Controller
     {
         [Route("/payment/{account}")]
@@ -122,7 +122,7 @@ Step 2: Throw an exception with a problem detail in your controller
 * Nancy pipelines extension:
 
 Step 1: Enable the extension
-~~~~
+~~~~cs
     public class SampleBootstrapper : DefaultNancyBootstrapper
     {
         protected override void RequestStartup(TinyIoCContainer container, IPipelines pipelines, NancyContext context)
@@ -133,7 +133,7 @@ Step 1: Enable the extension
 ~~~~
 
 Step 2: Throw an exception with a problem detail in your module
-~~~~
+~~~~cs
     public class PaymentModule : NancyModule
     {
         public PaymentModule()
@@ -166,13 +166,13 @@ Step 2: Throw an exception with a problem detail in your module
 Step 1: Add the exception filter to your configuration, or apply the attribute to a controller or method
 
 Configuration:
-~~~~
+~~~~cs
 	GlobalConfiguration.Configuration.Filters.Add(
 	    new HttpProblemDetailsExceptionFilterAttribute());
 ~~~~
 
 Controller or method:
-~~~~
+~~~~cs
 	[HttpProblemDetailsExceptionFilter]
     public class PaymentController : ApiController
     {
@@ -186,7 +186,7 @@ Controller or method:
 ~~~~
 
 Step 2: Throw an exception with a problem detail in your controller
-~~~~
+~~~~cs
     public class PaymentController : ApiController
     {
         [Route("/payment/{account}")]
